@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<style>
+    table{
+            font-family: arial;
+            font-size: 14px;
+            font-weight: bold;
+            color: #FFF;
+            text-transform: uppercase;
+            text-align: center;
+            background: #666;
+            padding: 5px 0;
+    }
+</style>
+<script>
+    function mayTinh(value){
+        var str = document.frm.ketqua.value;
+        if(value == "x"){
+            value = "*";
+        }
+        if(value == "="){
+            str = eval(str);
+        }
+        else if(value == "AC"){
+            str = "";
+        }else{
+            str += value;
+        }
+        document.frm.ketqua.value = str;
+    }
+</script>
+<form name="frm" method="post">
+    <table align="center" border="1" cellspacing="1" cellpadding="1">
+      <tr>
+        <td colspan="4"><textarea name="ketqua"></textarea></td>
+      </tr>
+      <tr>
+        <td><input onclick="mayTinh(this.value);" type="button" value="7" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="8" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="9" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="+" /></td>
+      </tr>
+      <tr>
+        <td><input onclick="mayTinh(this.value);" type="button" value="4" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="5" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="6" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="-" /></td>
+      </tr>
+      <tr>
+        <td><input onclick="mayTinh(this.value);" type="button" value="1" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="2" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="3" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="x" /></td>
+      </tr>
+      <tr>
+        <td><input onclick="mayTinh(this.value);" type="button" value="0" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="AC" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="=" /></td>
+        <td><input onclick="mayTinh(this.value);" type="button" value="/" /></td>
+      </tr>
+    </table>
+    </form>
+</body>
+</html>
